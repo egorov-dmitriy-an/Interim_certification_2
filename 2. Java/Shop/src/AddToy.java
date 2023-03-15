@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class AddToy {
-    public static Toy add(){
+    public static Toy add() {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите id:");
         int id = in.nextInt();
@@ -11,7 +11,6 @@ public class AddToy {
         int count = in.nextInt();
         System.out.println("Введите вес:");
         int weight = in.nextInt();
-        return new Toy(id, name,count, weight);
+        return new Toy(id, name, count, weight);
     }
- }
-
+}
