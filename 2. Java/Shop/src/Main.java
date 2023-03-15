@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -14,5 +16,43 @@ public class Main {
         product.add(pad);
 
         Printer.printToy(product);
+
+        Scanner in = new Scanner(System.in);
+        boolean stop = true;
+        while (stop == true) {
+            System.out.println("Введите команду:" +
+                    "\n1 - Показать все игрушки" +
+                    "\n2 - Добавить новую игрушку" +
+                    "\n3 - Провести розыгрыш игрушки" +
+                    "\n4 - Изменить параметр розыгрыша игрушки" +
+                    "\n5 - Показать розыгранные игрушки" +
+                    "\n0 - Завершить");
+            String key = in.nextLine();
+            System.out.print("\033[H\033[J");
+            switch (key) {
+                case "1":
+                    Printer.printToy(product);
+                    break;
+                case "2":
+                    product.add(AddToy.add());
+                    break;
+                case "3":
+                    System.out.println("Метод розгрыша");
+                    break;
+                case "4":
+                    System.out.println("Метод изменения веса");
+                    break;
+                case "5":
+                    System.out.println("Метод показа разыгранных игрушек");
+                    break;
+                case "0":
+                    stop = false;
+                    System.out.println("До свидания!");
+                    break;
+                default:
+                    System.out.println("Такой команды нет");
+                    break;
+            }
+        }
     }
 }

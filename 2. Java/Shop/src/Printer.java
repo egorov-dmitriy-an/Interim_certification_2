@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Printer {
+class Printer {
 
     public static void printToy(ArrayList<Toy> prod){
         System.out.println("id\tname\tcount\tweight");
