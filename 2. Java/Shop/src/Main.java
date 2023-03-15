@@ -41,7 +41,7 @@ public class Main {
                     System.out.println("Метод розгрыша");
                     break;
                 case "4":
-                    System.out.println("Метод изменения веса");
+                    Editor.newWeight(product);
                     break;
                 case "5":
                     if (lottery.size() == 0) {
