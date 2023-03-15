@@ -14,6 +14,7 @@ public class Main {
         product.add(puppe);
         product.add(candy);
         product.add(pad);
+        ArrayList<Toy> lottery = new ArrayList<>();
 
         Printer.printToy(product);
 
@@ -43,7 +44,12 @@ public class Main {
                     System.out.println("Метод изменения веса");
                     break;
                 case "5":
-                    System.out.println("Метод показа разыгранных игрушек");
+                    if (lottery.size() == 0) {
+                        System.out.println("Розыгрышей не было");
+                    }
+                    else {
+                        Printer.printToy(lottery);
+                    }
                     break;
                 case "0":
                     stop = false;
